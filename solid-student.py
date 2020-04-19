@@ -66,6 +66,9 @@ class Student():
     def full_name(self):
             return f"{self.__first_name} {self.__last_name}"
 
+    def __str__(self):
+        return f"{self.full_name} is {self.age} years old and is in cohort {self.cohort_number}."
+
 katie = Student()
 katie.first_name = "Katie"
 katie.last_name = "Wohl"
@@ -78,3 +81,5 @@ katie.cohort_number = 38
 # cannot set full name because no setter is included for that property
 # katie.full_name = "Cooper Nichols"
 # print(katie.full_name)
+
+print(katie)
